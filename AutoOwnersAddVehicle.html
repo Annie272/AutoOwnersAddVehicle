@@ -16,7 +16,7 @@
       id="mainForm"
       action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DU7000006EuID"
       method="POST"
-      class="bg-white p-8 rounded-2xl shadow-md w-full max-w-3xl space-y-8"
+      class="bg-white p-8 rounded-2xl shadow-md w-full max-w-4xl space-y-8"
       autocomplete="off"
       novalidate
     >
@@ -52,7 +52,7 @@
           <legend class="block text-sm font-medium text-gray-700 mb-1">
             Select the Request Type:<span class="star">*</span>
           </legend>
-          <div class="flex space-x-6">
+          <div class="flex flex-wrap gap-6">
             <label class="inline-flex items-center">
               <input type="radio" name="requestTypeRadios" value="Y" class="mr-2" />Quote
             </label>
@@ -135,16 +135,42 @@
       <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Coverage Section">
         <h3 class="text-xl font-semibold mb-4 text-gray-700">Coverage's Section</h3>
 
-        <div class="mb-4">
-          <label for="00NU7000006NdwT" class="block text-sm font-medium text-gray-700">
-            Comprehensive Deductible<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000006NdwT"
-            name="00NU7000006NdwT"
-            title="Comprehensive Deductible"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="00NU7000006NdwT" class="block text-sm font-medium text-gray-700">
+              Comprehensive Deductible<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000006NdwT"
+              name="00NU7000006NdwT"
+              title="Comprehensive Deductible"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="No Coverage">No Coverage</option>
+            <option value="0">0</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="500">500</option>
+            <option value="750">750</option>
+            <option value="1,000">1,000</option>
+            <option value="2,000">2,000</option>
+            <option value="3,000">3,000</option>
+            <option value="5,000">5,000</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000006Ne7l" class="block text-sm font-medium text-gray-700">
+              Collision Deductible<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000006Ne7l"
+              name="00NU7000006Ne7l"
+              title="Collision Deductible"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
              <option value="No Coverage">No Coverage</option>
             <option value="0">0</option>
             <option value="50">50</option>
@@ -157,68 +183,44 @@
             <option value="2,000">2,000</option>
             <option value="3,000">3,000</option>
             <option value="5,000">5,000</option>
-          </select>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qN69" class="block text-sm font-medium text-gray-700">
+              Full Glass<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qN69"
+              name="00NU7000007qN69"
+              title="Full Glass"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qNFp" class="block text-sm font-medium text-gray-700">
+              Customizations and Electronics<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNFp"
+              name="00NU7000007qNFp"
+              title="Customizations and Electronics"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="Included Limit">Included Limit</option>
+              <option value="Custom Limit">Custom Limit</option>
+            </select>
+          </div>
         </div>
 
-        <div class="mb-4">
-          <label for="00NU7000006Ne7l" class="block text-sm font-medium text-gray-700">
-            Collision Deductible<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000006Ne7l"
-            name="00NU7000006Ne7l"
-            title="Collision Deductible"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-             <option value="No Coverage">No Coverage</option>
-            <option value="0">0</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="250">250</option>
-            <option value="500">500</option>
-            <option value="750">750</option>
-            <option value="1,000">1,000</option>
-            <option value="2,000">2,000</option>
-            <option value="3,000">3,000</option>
-            <option value="5,000">5,000</option>
-          </select>
-        </div>
-
-        <div class="mb-4">
-          <label for="00NU7000007qN69" class="block text-sm font-medium text-gray-700">
-            Full Glass<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000007qN69"
-            name="00NU7000007qN69"
-            title="Full Glass"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-
-        <div class="mb-4">
-          <label for="00NU7000007qNFp" class="block text-sm font-medium text-gray-700">
-            Customizations and Electronics<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000007qNFp"
-            name="00NU7000007qNFp"
-            title="Customizations and Electronics"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="Included Limit">Included Limit</option>
-            <option value="Custom Limit">Custom Limit</option>
-          </select>
-        </div>
-
-        <!-- Custom Limit Value: shown/required only when "Custom Limit" is selected -->
-        <div class="mb-4 hidden" id="customLimitWrapper">
+        <!-- Custom Limit Value: conditional -->
+        <div class="mt-4 hidden" id="customLimitWrapper">
           <label for="00NU7000007qNKf" class="block text-sm font-medium text-gray-700">
             Custom Limit Value<span class="star">*</span>
           </label>
@@ -232,106 +234,356 @@
           />
         </div>
 
+        <div class="grid md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label for="00NU7000007qNSj" class="block text-sm font-medium text-gray-700">
+              Road Trouble Service<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNSj"
+              name="00NU7000007qNSj"
+              title="Road Trouble Service"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="No Coverage">No Coverage</option>
+              <option value="All Reasonable Costs">All Reasonable Costs</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qNcP" class="block text-sm font-medium text-gray-700">
+              Additional Expense<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNcP"
+              name="00NU7000007qNcP"
+              title="Additional Expense"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="No Coverage">No Coverage</option>
+              <option value="30 / 900">30 / 900</option>
+              <option value="40 / 1,200">40 / 1,200</option>
+              <option value="50 / 1,500">50 / 1,500</option>
+              <option value="75 / 2,250">75 / 2,250</option>
+              <option value="100 / 3,000">100 / 3,000</option>
+              <option value="150 / 4,500">150 / 4,500</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qNkT" class="block text-sm font-medium text-gray-700">
+              Loan / Lease Gap<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNkT"
+              name="00NU7000007qNkT"
+              title="Loan / Lease Gap"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="No Coverage">No Coverage</option>
+              <option value="Loan Gap">Loan Gap</option>
+              <option value="Lease Gap">Lease Gap</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qNu9" class="block text-sm font-medium text-gray-700">
+              Original Titleholder of Vehicle<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNu9"
+              name="00NU7000007qNu9"
+              title="Original Titleholder of Vehicle"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qNyz" class="block text-sm font-medium text-gray-700">
+              Limited Transport/Network Comp Driver<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qNyz"
+              name="00NU7000007qNyz"
+              title="Limited Transport/Network Comp Driver"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="00NU7000007qO2D" class="block text-sm font-medium text-gray-700">
+              Original Equipment Manufacturer Parts<span class="star">*</span>
+            </label>
+            <select
+              id="00NU7000007qO2D"
+              name="00NU7000007qO2D"
+              title="Original Equipment Manufacturer Parts"
+              class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            >
+              <option value="">--None--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+<!-- Lien / Lease Section -->
+<section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Lien / Lease Section">
+  <h3 class="text-xl font-semibold mb-4 text-gray-700">Lien / Lease</h3>
+
+  <div class="mb-4">
+    <label for="00NU7000007qO73" class="block text-sm font-medium text-gray-700">
+      Lien/Lease Type<span class="star">*</span>
+    </label>
+    <select
+      id="00NU7000007qO73"
+      name="00NU7000007qO73"
+      title="Lien/Lease Type"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+    >
+      <option value="">--None--</option>
+      <option value="Lessor">Lessor</option>
+      <option value="Lienholder">Lienholder</option>
+    </select>
+  </div>
+
+  <!-- Lienholder (UI: Lien/Lease Name:) -->
+  <div class="mb-4">
+    <label for="00NU7000007QpKb" class="block text-sm font-medium text-gray-700">
+      Lien/Lease Name:<span class="star">*</span>
+    </label>
+    <input
+      id="00NU7000007QpKb"
+      maxlength="100"
+      name="00NU7000007QpKb"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+    />
+  </div>
+
+  <!-- Lien/Lease Name Line 2 (with label) -->
+  <div class="mb-4">
+    <label for="00NU7000007qU9F" class="block text-sm font-medium text-gray-700">
+      Lien/Lease Name Line 2<span class="star">*</span>
+    </label>
+    <input
+      id="00NU7000007qU9F"
+      maxlength="50"
+      name="00NU7000007qU9F"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+    />
+  </div>
+
+  <!-- Address 1 (labeled) -->
+  <div class="mb-2">
+    <label for="00NU7000007QpPR" class="block text-sm font-medium text-gray-700">
+      Address<span class="star">*</span>
+    </label>
+    <input
+      id="00NU7000007QpPR"
+      maxlength="100"
+      name="00NU7000007QpPR"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+    />
+  </div>
+
+  <!-- Address 2 (blank field, no visible label) -->
+  <div class="mb-4">
+    <!-- no label on purpose -->
+    <input
+      id="00NU7000007QpUH"
+      maxlength="100"
+      name="00NU7000007QpUH"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      placeholder=""
+    />
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-4">
+    <!-- City (labeled) -->
+    <div>
+      <label for="00NU7000007QpcL" class="block text-sm font-medium text-gray-700">
+        City<span class="star">*</span>
+      </label>
+      <input
+        id="00NU7000007QpcL"
+        maxlength="50"
+        name="00NU7000007QpcL"
+        size="20"
+        type="text"
+        class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      />
+    </div>
+
+    <!-- State (labeled) -->
+    <div>
+      <label for="00NU7000007lLwD" class="block text-sm font-medium text-gray-700">
+        State<span class="star">*</span>
+      </label>
+      <select
+        id="00NU7000007lLwD"
+        name="00NU7000007lLwD"
+        title="License State AutoOwners"
+        class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      >
+        <option value=""></option>
+        <option value="AK">AK</option>
+        <option value="AL">AL</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DC">DC</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="IA">IA</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="ME">ME</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MO">MO</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="NE">NE</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NV">NV</option>
+        <option value="NY">NY</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VA">VA</option>
+        <option value="VT">VT</option>
+        <option value="WA">WA</option>
+        <option value="WI">WI</option>
+        <option value="WV">WV</option>
+        <option value="WY">WY</option>
+      </select>
+    </div>
+
+    <!-- Zip (labeled) -->
+    <div>
+      <label for="00NU7000007qTgD" class="block text-sm font-medium text-gray-700">
+        Zip<span class="star">*</span>
+      </label>
+      <input
+        id="00NU7000007qTgD"
+        maxlength="30"
+        name="00NU7000007qTgD"
+        size="20"
+        type="text"
+        class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      />
+    </div>
+  </div>
+
+  <!-- Zip Auto Owners 2 (blank field, no label) -->
+  <div class="mt-4">
+    <!-- no label on purpose -->
+    <input
+      id="00NU7000007qTpt"
+      maxlength="30"
+      name="00NU7000007qTpt"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      placeholder=""
+    />
+  </div>
+</section>
+
+
+
+
+      <!-- Driver Assignment Section -->
+      <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Driver Assignment Section">
+        <h3 class="text-xl font-semibold mb-4 text-gray-700">Driver Assignment</h3>
+
         <div class="mb-4">
-          <label for="00NU7000007qNSj" class="block text-sm font-medium text-gray-700">
-            Road Trouble Service<span class="star">*</span>
+          <label for="00NU7000006N0iD" class="block text-sm font-medium text-gray-700">
+            Vehicle Use<span class="star">*</span>
           </label>
           <select
-            id="00NU7000007qNSj"
-            name="00NU7000007qNSj"
-            title="Road Trouble Service"
+            id="00NU7000006N0iD"
+            name="00NU7000006N0iD"
+            title="Vehicle Use"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
           >
-            <option value="">--None--</option>
-            <option value="No Coverage">No Coverage</option>
-            <option value="All Reasonable Costs">All Reasonable Costs</option>
+            <option value=""></option>
+            <option value="Pleasure (includes commute 0-3 mi)">Pleasure (includes commute 0-3 mi)</option>
+            <option value="Commute to Work/School (4-14 mi)">Commute to Work/School (4-14 mi)</option>
+            <option value="Commute to Work/School (15+ mi)">Commute to Work/School (15+ mi)</option>
+            <option value="Business">Business</option>
+            <option value="Occasional Business">Occasional Business</option>
+            <option value="Farm">Farm</option>
           </select>
         </div>
 
         <div class="mb-4">
-          <label for="00NU7000007qNcP" class="block text-sm font-medium text-gray-700">
-            Additional Expense<span class="star">*</span>
+          <label for="00NU7000006AY3N" class="block text-sm font-medium text-gray-700">
+            Miles to Work/School<span class="star">*</span>
           </label>
-          <select
-            id="00NU7000007qNcP"
-            name="00NU7000007qNcP"
-            title="Additional Expense"
+          <input
+            id="00NU7000006AY3N"
+            maxlength="18"
+            name="00NU7000006AY3N"
+            size="20"
+            type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="No Coverage">No Coverage</option>
-            <option value="30 / 900">30 / 900</option>
-            <option value="40 / 1,200">40 / 1,200</option>
-            <option value="50 / 1,500">50 / 1,500</option>
-            <option value="75 / 2,250">75 / 2,250</option>
-            <option value="100 / 3,000">100 / 3,000</option>
-            <option value="150 / 4,500">150 / 4,500</option>
-          </select>
-        </div>
-
-        <div class="mb-4">
-          <label for="00NU7000007qNkT" class="block text-sm font-medium text-gray-700">
-            Loan / Lease Gap<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000007qNkT"
-            name="00NU7000007qNkT"
-            title="Loan / Lease Gap"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="No Coverage">No Coverage</option>
-            <option value="Loan Gap">Loan Gap</option>
-            <option value="Lease Gap">Lease Gap</option>
-          </select>
-        </div>
-
-        <div class="mb-4">
-          <label for="00NU7000007qNu9" class="block text-sm font-medium text-gray-700">
-            Original Titleholder of Vehicle<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000007qNu9"
-            name="00NU7000007qNu9"
-            title="Original Titleholder of Vehicle"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-
-        <div class="mb-4">
-          <label for="00NU7000007qNyz" class="block text-sm font-medium text-gray-700">
-            Limited Transportation Network Company Driver Coverage<span class="star">*</span>
-          </label>
-          <select
-            id="00NU7000007qNyz"
-            name="00NU7000007qNyz"
-            title="Limited Transportation Network Company Driver Coverage"
-            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          />
         </div>
 
         <div class="mb-0">
-          <label for="00NU7000007qO2D" class="block text-sm font-medium text-gray-700">
-            Original Equipment Manufacturer Parts Plus<span class="star">*</span>
+          <label for="00NU7000007qVID" class="block text-sm font-medium text-gray-700">
+            Principal Driver Name<span class="star">*</span>
           </label>
-          <select
-            id="00NU7000007qO2D"
-            name="00NU7000007qO2D"
-            title="Original Equipment Manufacturer Parts Plus"
+          <input
+            id="00NU7000007qVID"
+            maxlength="50"
+            name="00NU7000007qVID"
+            size="20"
+            type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-          >
-            <option value="">--None--</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          />
         </div>
       </section>
 
@@ -430,7 +682,6 @@
         } else {
           hiddenSelect.value = "";
         }
-
         syncRequestType();
 
         // Custom Limit dynamic show/hide
@@ -460,23 +711,41 @@
         const form = document.getElementById("mainForm");
 
         const requiredFields = [
+          // Policy section
           { id: "email", label: "Email", type: "email" },
           { radioGroupName: "requestTypeRadios", label: "Select the Request Type:" },
           { id: "00NU7000005zuX3", label: "Policy Number" },
           { id: "00NU7000005zuLl", label: "Effective Date (MM/DD/YYYY)", type: "date" },
+
+          // Vehicle
           { id: "00NU7000006Knh3", label: "VIN Number of New Vehicle" },
           { id: "00NU7000007qMA6", label: "Anti-Theft" },
+
+          // Coverage
           { id: "00NU7000006NdwT", label: "Comprehensive Deductible" },
           { id: "00NU7000006Ne7l", label: "Collision Deductible" },
           { id: "00NU7000007qN69", label: "Full Glass" },
           { id: "00NU7000007qNFp", label: "Customizations and Electronics" },
-          // Custom Limit Value is conditionally required (checked in validation)
           { id: "00NU7000007qNSj", label: "Road Trouble Service" },
           { id: "00NU7000007qNcP", label: "Additional Expense" },
           { id: "00NU7000007qNkT", label: "Loan / Lease Gap" },
           { id: "00NU7000007qNu9", label: "Original Titleholder of Vehicle" },
-          { id: "00NU7000007qNyz", label: "Limited Transportation Network Company Driver Coverage" },
-          { id: "00NU7000007qO2D", label: "Original Equipment Manufacturer Parts Plus" }
+          { id: "00NU7000007qNyz", label: "Limited Transport/Network Comp Driver" },
+          { id: "00NU7000007qO2D", label: "Original Equipment Manufacturer Parts" },
+
+          // Lien / Lease
+          { id: "00NU7000007qO73", label: "Lien/Lease Type" },
+          { id: "00NU7000007QpKb", label: "Lien/Lease Name" },
+          { id: "00NU7000007qU9F", label: "Lien/Lease Name Line 2" },
+          { id: "00NU7000007QpPR", label: "Address" },
+          { id: "00NU7000007QpcL", label: "City" },
+          { id: "00NU7000007lLwD", label: "State" },
+          { id: "00NU7000007qTgD", label: "Zip" },
+
+          // Driver Assignment
+          { id: "00NU7000006N0iD", label: "Vehicle Use" },
+          { id: "00NU7000006AY3N", label: "Miles to Work/School" },
+          { id: "00NU7000007qVID", label: "Principal Driver Name" }
         ];
 
         function validateFields() {
@@ -493,11 +762,6 @@
 
             const el = document.getElementById(field.id);
             if (!el) return;
-
-            if (field.id === "00NU7000007qNKf") {
-              // handled separately as conditional
-              return;
-            }
 
             if (field.type === "email") {
               if (!el.value.trim() || !el.checkValidity()) missing.push(field.label);
