@@ -339,7 +339,6 @@
         </div>
       </section>
 
-<!-- Lien / Lease Section -->
 <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Lien / Lease Section">
   <h3 class="text-xl font-semibold mb-4 text-gray-700">Lien / Lease</h3>
 
@@ -374,8 +373,8 @@
     />
   </div>
 
-  <!-- Lien/Lease Name Line 2 (with label) -->
-  <div class="mb-4">
+  <!-- Lien/Lease Name Line 2 (labeled) -->
+  <div class="mb-2">
     <label for="00NU7000007qU9F" class="block text-sm font-medium text-gray-700">
       Lien/Lease Name Line 2<span class="star">*</span>
     </label>
@@ -386,6 +385,20 @@
       size="20"
       type="text"
       class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+    />
+  </div>
+
+  <!-- NEW blank field under Lien/Lease Name Line 2 (no label) -->
+  <div class="mb-4">
+    <!-- no visible label on purpose -->
+    <input
+      id="00NU7000007rAur"
+      maxlength="50"
+      name="00NU7000007rAur"
+      size="20"
+      type="text"
+      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+      placeholder=""
     />
   </div>
 
@@ -419,7 +432,7 @@
   </div>
 
   <div class="grid md:grid-cols-3 gap-4">
-    <!-- City (labeled) -->
+    <!-- City -->
     <div>
       <label for="00NU7000007QpcL" class="block text-sm font-medium text-gray-700">
         City<span class="star">*</span>
@@ -434,7 +447,7 @@
       />
     </div>
 
-    <!-- State (labeled) -->
+    <!-- State -->
     <div>
       <label for="00NU7000007lLwD" class="block text-sm font-medium text-gray-700">
         State<span class="star">*</span>
@@ -445,7 +458,7 @@
         title="License State AutoOwners"
         class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
       >
-        <option value=""></option>
+        <option value="">--None--</option>
         <option value="AK">AK</option>
         <option value="AL">AL</option>
         <option value="AR">AR</option>
@@ -500,7 +513,7 @@
       </select>
     </div>
 
-    <!-- Zip (labeled) -->
+    <!-- Zip -->
     <div>
       <label for="00NU7000007qTgD" class="block text-sm font-medium text-gray-700">
         Zip<span class="star">*</span>
@@ -530,9 +543,6 @@
     />
   </div>
 </section>
-
-
-
 
       <!-- Driver Assignment Section -->
       <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Driver Assignment Section">
@@ -599,7 +609,7 @@
       <input type="hidden" id="00NU7000007OdKL" name="00NU7000007OdKL" value="Auto Owners" />
       <input type="hidden" name="delete_Action_Form__c" value="1" />
       <input type="hidden" name="company" value="Caelius Test Auto Owners Add Vehicle" />
-      <input type="hidden" name="Debug_Notes__c" value="Safeco Test: 2025-06-27 07:21AM" />
+      <input type="hidden" name="Debug_Notes__c" value="New Test" />
 
       <div class="flex justify-end mt-6">
         <button
