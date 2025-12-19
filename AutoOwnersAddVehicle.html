@@ -23,6 +23,7 @@
       <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
         Add Vehicle Auto Owners Form
       </h2>
+
       <!-- Policy Changes Section -->
       <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Policy Changes Section">
         <h3 class="text-xl font-semibold mb-4 text-gray-700">Policy Changes</h3>
@@ -387,7 +388,7 @@
     />
   </div>
 
-  <!-- NEW blank field under Lien/Lease Name Line 2 (no label) -->
+  <!-- Extra Lien/Lease Name line (blank, no label) -->
   <div class="mb-4">
     <!-- no visible label on purpose -->
     <input
@@ -512,36 +513,42 @@
       </select>
     </div>
 
-    <!-- Zip -->
-    <div>
-      <label for="00NU7000007qTgD" class="block text-sm font-medium text-gray-700">
-        Zip<span class="star">*</span>
-      </label>
-      <input
-        id="00NU7000007qTgD"
-        maxlength="30"
-        name="00NU7000007qTgD"
-        size="20"
-        type="text"
-        class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-      />
+    <!-- Zip + Zip 2 side by side -->
+    <div class="md:col-span-1">
+      <div class="grid grid-cols-2 gap-2">
+        <!-- Zip (labeled) -->
+        <div>
+          <label for="00NU7000007qTgD" class="block text-sm font-medium text-gray-700">
+            Zip<span class="star">*</span>
+          </label>
+          <input
+            id="00NU7000007qTgD"
+            maxlength="30"
+            name="00NU7000007qTgD"
+            size="20"
+            type="text"
+            class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+          />
+        </div>
+
+        <!-- Zip Auto Owners 2 (blank, no label) -->
+        <div class="flex items-end">
+          <!-- no label on purpose -->
+          <input
+            id="00NU7000007qTpt"
+            maxlength="30"
+            name="00NU7000007qTpt"
+            size="20"
+            type="text"
+            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+            placeholder=""
+          />
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Zip Auto Owners 2 (blank field, no label) -->
-  <div class="mt-4">
-    <!-- no label on purpose -->
-    <input
-      id="00NU7000007qTpt"
-      maxlength="30"
-      name="00NU7000007qTpt"
-      size="20"
-      type="text"
-      class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-      placeholder=""
-    />
-  </div>
 </section>
+
 
       <!-- Driver Assignment Section -->
       <section class="bg-gray-50 border rounded-xl p-6 shadow-inner" aria-label="Driver Assignment Section">
